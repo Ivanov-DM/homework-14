@@ -1,0 +1,20 @@
+{
+  "name": "homework-14",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ivanov-DM/homework-14.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ivanov-DM/homework-14/issues"
+  },
+  "homepage": "https://github.com/Ivanov-DM/homework-14#readme"
+}
