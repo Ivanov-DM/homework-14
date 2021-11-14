@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Ivanov-DM/homework-14/issues"
   },
-  "homepage": "https://github.com/Ivanov-DM/homework-14#readme"
+  "homepage": "https://github.com/Ivanov-DM/homework-14#readme",
+  "devDependencies": {
+    "typescript": "^4.4.4"
+  }
 }
