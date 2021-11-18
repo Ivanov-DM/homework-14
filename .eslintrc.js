@@ -22,5 +22,6 @@ module.exports = {
     "no-plusplus": ["error", { allowForLoopAfterthoughts: true }],
     "import/no-unresolved": "off",
     "import/extensions": ["warn", "never"],
+    "default-param-last": "off",
   },
 };
