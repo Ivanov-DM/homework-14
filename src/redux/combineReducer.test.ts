@@ -16,6 +16,7 @@ describe("combineReducers", () => {
           state - action.payload
       ),
     };
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     expect(combineReducers(config)).toBeInstanceOf(Function);
   });
@@ -43,6 +44,7 @@ describe("combineReducers", () => {
       a: jest.fn((state, action) => state + action.payload),
       b: jest.fn((state, action) => state - action.payload),
     };
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     const reducer = combineReducers<State, { payload: number }>(config);
 
