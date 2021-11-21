@@ -7,9 +7,16 @@ describe("combineReducers", () => {
 
   it("returns a function", () => {
     const config = {
-      a: jest.fn((state = 5, action) => state + action.payload),
-      b: jest.fn((state = 6, action) => state - action.payload),
+      a: jest.fn(
+        (state = 5, action = { type: "", payload: null }) =>
+          state + action.payload
+      ),
+      b: jest.fn(
+        (state = 6, action = { type: "", payload: null }) =>
+          state - action.payload
+      ),
     };
+    // @ts-ignore
     expect(combineReducers(config)).toBeInstanceOf(Function);
   });
 
@@ -33,9 +40,10 @@ describe("combineReducers", () => {
   it("calls subreducers with proper values", () => {
     type State = { a: number; b: number };
     const config = {
-      a: jest.fn((state = 5, action) => state + action.payload),
-      b: jest.fn((state = 6, action) => state - action.payload),
+      a: jest.fn((state, action) => state + action.payload),
+      b: jest.fn((state, action) => state - action.payload),
     };
+    // @ts-ignore
     const reducer = combineReducers<State, { payload: number }>(config);
 
     const state: State = {

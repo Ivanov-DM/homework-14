@@ -6,7 +6,7 @@ describe("createStore", () => {
       expect(createStore).toBeInstanceOf(Function);
     });
     it("generates store with reducer", () => {
-      const state = 2;
+      const state = { a: 2 };
       const store = createStore(() => state);
       expect(store.getState).toBeInstanceOf(Function);
 
@@ -20,8 +20,8 @@ describe("createStore", () => {
   describe("functional interface", () => {
     it("returns state based on initial state", () => {
       const state = { name: "Bob" };
-      expect(createStore(() => null).getState()).toBe(undefined);
-      expect(createStore(() => null, state).getState()).toBe(state);
+      expect(createStore(() => state).getState()).toBe(undefined);
+      expect(createStore(() => state, state).getState()).toBe(state);
     });
 
     it("calculates new state with reducer call", () => {

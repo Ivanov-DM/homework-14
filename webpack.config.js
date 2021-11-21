@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.ts",
@@ -12,8 +13,14 @@ module.exports = {
     port: 4200,
   },
   resolve: {
-    extensions: [".js", "ts"],
+    extensions: [".js", ".ts"],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "./template.html"),
+      filename: "index.html",
+    }),
+  ],
   module: {
     rules: [
       {

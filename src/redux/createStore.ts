@@ -3,7 +3,7 @@ import { Store, Reducer, Middleware } from "./types";
 export function createStore<State, Action>(
   reducer: Reducer<State, Action>,
   preloadedState?: State,
-  middlewares?: Middleware<State, Action>[]
+  middlewares?: Middleware<Action>[]
 ): Store<State, Action> {
   let state: State = <State>preloadedState;
   let subscribers: (() => void)[] = [];
